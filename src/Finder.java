@@ -23,7 +23,6 @@ public class Finder {
         long prime = 2499998741L;
         int radix = 256;
         ArrayList<Integer>[] hashMap = new ArrayList[(int) prime];
-
         br.close();
     }
 
