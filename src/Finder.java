@@ -23,6 +23,10 @@ public class Finder {
         long prime = 2499998741L;
         int radix = 256;
         ArrayList<Integer>[] hashMap = new ArrayList[(int) prime];
+        while(br.readLine() != null){
+            long num = hash(br.readLine(), radix,prime);
+            hashMap[(int) num].add((int)hash(br.readLine(), radix,prime));
+        }
         br.close();
     }
 
