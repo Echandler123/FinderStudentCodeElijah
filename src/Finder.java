@@ -22,10 +22,11 @@ public class Finder {
         // TODO: Complete the buildTable() function!
         long prime = 2499998741L;
         int radix = 256;
-        ArrayList<Integer>[] hashMap = new ArrayList[(int) prime];
-        while(br.readLine() != null){
-            long num = hash(br.readLine(), radix,prime);
-            hashMap[(int) num].add((int)hash(br.readLine(), radix,prime));
+        HashMap HM = new HashMap();
+        String currentLine = br.readLine();
+        while(currentLine != null){
+            long num = hash(currentLine, radix,prime);
+            [(int) num].add((int)hash(currentLine, radix,prime));
         }
         br.close();
     }
