@@ -13,8 +13,6 @@ import java.util.ArrayList;
  **/
 
 public class Finder {
-
-
     private HashMap map;
     // Constructor
     public Finder() {

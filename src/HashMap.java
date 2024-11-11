@@ -26,7 +26,7 @@ public class HashMap {
             resize();
         }
         int index = hash(key);
-        // Add key and value pair if the current keys index is empty
+        // Add key and value pair if the current key's index is empty
         if(keys[index] == null){
             keys[index] = key;
             values[index] = value;
