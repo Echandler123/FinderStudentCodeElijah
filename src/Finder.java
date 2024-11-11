@@ -25,8 +25,8 @@ public class Finder {
         HashMap HM = new HashMap();
         String currentLine = br.readLine();
         while(currentLine != null){
-            long num = hash(currentLine, radix,prime);
-            [(int) num].add((int)hash(currentLine, radix,prime));
+            //long num = hash(currentLine, radix,prime);
+           // [(int) num].add((int)hash(currentLine, radix,prime));
         }
         br.close();
     }
@@ -35,12 +35,5 @@ public class Finder {
         // TODO: Complete the query() function!
         return INVALID;
     }
-    public static long hash(String STR, int radix, long prime) {
-        long hash = 0;
-        int length = STR.length();
-        for (int i = 0; i < length; i++) {
-            hash = ((hash * radix + STR.charAt(i)) % prime);
-        }
-        return hash;
-    }
+
 }
