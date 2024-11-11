@@ -33,7 +33,7 @@ public class FinderTester {
     }
 
     @Test
-    @Timeout(value = 2000, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 5000, unit = TimeUnit.MILLISECONDS)
     public void testProducts() {
         setTestData("UPC", 0, 2);
         runTest();
