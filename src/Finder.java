@@ -14,26 +14,29 @@ import java.util.ArrayList;
 
 public class Finder {
 
-    private static final String INVALID = "INVALID KEY";
 
-    public Finder() {}
+    private HashMap map;
+    public Finder() {
+        this.map = new HashMap();
+    }
 
     public void buildTable(BufferedReader br, int keyCol, int valCol) throws IOException {
         // TODO: Complete the buildTable() function!
-        long prime = 2499998741L;
-        int radix = 256;
-        HashMap HM = new HashMap();
-        String currentLine = br.readLine();
-        while(currentLine != null){
-            //long num = hash(currentLine, radix,prime);
-           // [(int) num].add((int)hash(currentLine, radix,prime));
+        String line = br.readLine();
+        String[] current;
+        while(line != null){
+            current = line.split(",");
+            String key = current[keyCol];
+            String val = current[valCol];
+            map.add(key,val);
+            line = br.readLine();
         }
         br.close();
     }
 
     public String query(String key){
         // TODO: Complete the query() function!
-        return INVALID;
+        return map.get(key);
     }
 
 }
